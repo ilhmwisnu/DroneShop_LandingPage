@@ -8,16 +8,72 @@
       bg-slate-100
       h-fit
       w-full
-      sm:px-14
-      lg:px-32 lg:pt-10 lg:pb-24
+      sm:px-12
+      lg:px-24 lg:pt-10 lg:pb-24
+      xl:px-32
+      overflow-hidden
     "
   >
     <nav class="flex flex-row justify-between content-center lg:mb-24">
       <div class="flex items-center">
-        <img class="mr-4" src="src\assets\Vector.png" alt="Logo" />
-        <h1 class="font-medium">DroneshopID</h1>
+        <button class="p-1 active:bg-slate-400 active:rounded-full" @click="hide">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 lg:hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h7"
+            />
+          </svg>
+        </button>
+        <img
+          class="mr-4 hidden lg:block"
+          src="src\assets\Vector.png"
+          alt="Logo"
+        />
+        <h1 class="font-medium lg:relative lg:right-3">DroneshopID</h1>
       </div>
-      <div class="hidden lg:flex items-center gap-x-8 xl:gap-x-14">
+      <div
+        class="
+          fixed
+          left-0
+          top-0
+          z-30
+          gap-y-5
+          bg-slate-100
+          w-2/6
+          p-4
+          h-screen
+          shadow-md
+          gap-x-8
+          flex flex-col
+          lg:static lg:w-fit lg:h-fit lg:shadow-none lg:flex-row lg:items-center
+          xl:gap-x-14
+        "
+         :class="{'-left-full' : hiddenNav}"
+      >
+        <button @click="hide" class="lg:hidden">
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 "
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+        </button>
         <a class="font-medium" href="#">Home</a>
         <a class="font-medium" href="#">Gallery</a>
         <a class="font-medium" href="#">Products</a>
@@ -53,8 +109,12 @@
         </p>
         <PrimaryBtn class="mt-8" text="Get Now" />
       </div>
-      <div class="my-10">
-        <img class="" src="src\assets\hero-image 5.png" alt="" />
+      <div class="my-10 relative">
+        <img
+          class="relative scale-100 lg:scale-125 lg:left-1/4"
+          src="src\assets\hero-image 5.png"
+          alt=""
+        />
       </div>
     </div>
   </header>
@@ -136,19 +196,30 @@ up to 4K Camera Resolution"
     <img class="mx-auto" src="src\assets\Mask Group.png" alt="" />
   </section>
   <!-- New Product -->
-  <section class="px-4 pt-11 pb-16 text-center sm:px-8 md:px-16 lg:px-32">
+  <section class="px-4 pt-11 pb-16 text-center sm:px-8 md:px-12 lg:px-32">
     <h2 class="font-bold mx-auto text-5xl sm:w-3/5">New Products</h2>
     <p class="text-2xl mx-auto mt-8 w-4/5 text-gray-700">
       New innovation, best quality than before. make every moment flying
       operation become unforgettable.
     </p>
-    <div class="flex flex-col md:flex-row gap-6 md:gap-4 mt-14 justify-between">
+    <div
+      class="
+        flex flex-col
+        mx-6
+        sm:mx-10
+        md:mx-0 md:flex-row
+        gap-6
+        md:gap-4
+        mt-14
+        justify-between
+      "
+    >
       <div
         v-for="drone in drones"
         :key="drone.name"
-        class="border border-gray-300 rounded-2xl p-4 w-80 mx-auto"
+        class="border border-gray-300 rounded-2xl p-4 w-fit mx-auto"
       >
-        <img class="rounded-2xl mb-6" :src="drone.src" alt="" />
+        <img class="rounded-2xl mb-6 w-full" :src="drone.src" alt="" />
         <h4 class="mb-3 text-2xl font-medium">{{ drone.name }}</h4>
         <p class="mb-3 text-3xl font-bold">{{ drone.price }}</p>
         <p class="px-4 mb-4">
@@ -186,23 +257,35 @@ up to 4K Camera Resolution"
       grid grid-cols-2
       bg-slate-800
       p-4
+      gap-10
       py-10
+      text-center
       items-center
-      md:grid-cols-5 sm:px-10
-      md:px-16
-      lg:px-32
+      sm:px-10
+      md:px-16 md:grid-cols-3
+      lg:grid-cols-4 lg:px-32
     "
   >
-    <div class="text-white mx-auto  col-span-2">
+    <div class="text-white mx-auto col-span-2 md:col-span-3 lg:col-span-1">
       <div class="flex flex-col">
-        <div class="flex flex-row place-items-center justify-center mb-2">
+        <div
+          class="
+            flex flex-row
+            place-items-center
+            relative
+            right-4
+            justify-center
+            mb-2
+            lg:justify-start
+          "
+        >
           <img class="scale-50" src="src\assets\Logo.png" alt="" />
           <h1 class="font-medium">DroneshopID</h1>
         </div>
-        <p class="font-light text-white text-base mb-3 w-fit">
+        <p class="font-light text-white text-base text-left mb-3 w-fit">
           Look up the sky and beautiful world easily.
         </p>
-        <div class="flex flex-row justify-evenly">
+        <div class="flex flex-row justify-between">
           <img class="scale-75" src="src\assets\social-facebook.png" alt="" />
           <img class="scale-75" src="src\assets\social-instagram.png" alt="" />
           <img class="scale-75" src="src\assets\social-twitter.png" alt="" />
@@ -210,7 +293,7 @@ up to 4K Camera Resolution"
         </div>
       </div>
     </div>
-    <div class="text-white mx-auto">
+    <div class="text-white mx-auto md:text-left">
       <ul>
         <li class="mb-3 font-bold">Explore</li>
         <li class="mb-3">Our Services</li>
@@ -219,7 +302,7 @@ up to 4K Camera Resolution"
         <li class="mb-3">Pricelist</li>
       </ul>
     </div>
-    <div class="text-white mx-auto">
+    <div class="text-white mx-auto md:text-left">
       <ul>
         <li class="mb-3 font-bold">Account</li>
         <li class="mb-3">My Account</li>
@@ -228,7 +311,7 @@ up to 4K Camera Resolution"
         <li class="mb-3">Moment</li>
       </ul>
     </div>
-    <div class="text-white mx-auto col-span-1">
+    <div class="text-white mx-auto col-span-2 md:text-left md:col-span-1">
       <ul>
         <li class="mb-3 font-bold">Office</li>
         <li class="mb-3">+022 123 4567</li>
@@ -247,6 +330,7 @@ export default {
   components: { PrimaryBtn, Content },
   data() {
     return {
+      hiddenNav : true,
       drones: [
         {
           name: "Mini Drone",
@@ -289,5 +373,10 @@ export default {
       ],
     };
   },
+  methods : {
+    hide(){
+      this.hiddenNav = !this.hiddenNav
+    }
+  }
 };
 </script>
