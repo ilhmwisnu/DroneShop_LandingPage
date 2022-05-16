@@ -34,7 +34,7 @@
         </button>
         <img
           class="mr-4 hidden lg:block"
-          src="src\assets\Vector.png"
+          :src="require('src/assets/Vector.png')"
           alt="Logo"
         />
         <h1 class="font-medium lg:relative lg:right-3">DroneshopID</h1>
@@ -98,7 +98,7 @@
             w-fit
           "
         >
-          <img class="mr-2" src="src\assets\tag 1.png" alt="" />
+          <img class="mr-2" :src="require('src/assets/tag 1.png')"  alt="" />
           <p class="text-red-500 text-sm">GET 25% DISCOUNT</p>
         </div>
         <h2 class="text-7xl font-bold mt-4 mb-8">Representing Drone Light</h2>
@@ -112,7 +112,7 @@
       <div class="my-10 relative">
         <img
           class="relative scale-100 lg:scale-125 lg:left-1/4"
-          src="src\assets\hero-image 5.png"
+          :src="require( 'src/assets/hero-image 5.png')"
           alt=""
         />
       </div>
@@ -121,12 +121,12 @@
   <!-- Content 1 & 2 -->
   <section class="grid grid-cols-1 md:grid-cols-2">
     <content
-      src="src\assets\ultra_light.png"
+    :src="require('src/assets/ultra_light.png')"
       title="Ultra Light"
       content="Drone move faster with weighing component under 200 g"
     />
     <content
-      src="src\assets\best_resolution.png"
+      :src="require('src/assets/best_resolution.png')"
       title="Best Resolution"
       content="Take a beautiful view with best camera
 up to 4K Camera Resolution"
@@ -171,7 +171,7 @@ up to 4K Camera Resolution"
             -translate-x-1/2
             sm:max-w-fit
           "
-          src="src\assets\features_cut_bg.png"
+          :src="require('src/assets/features_cut_bg.png')"
           alt=""
         />
       </div>
@@ -193,7 +193,7 @@ up to 4K Camera Resolution"
     >
       4K video shot on our Drone Light
     </h2>
-    <img class="mx-auto" src="src\assets\Mask Group.png" alt="" />
+    <img class="mx-auto" :src="require('src/assets/Mask Group.png')" alt="" />
   </section>
   <!-- New Product -->
   <section class="px-4 pt-11 pb-16 text-center sm:px-8 md:px-12 lg:px-32">
@@ -279,17 +279,17 @@ up to 4K Camera Resolution"
             lg:justify-start
           "
         >
-          <img class="scale-50" src="src\assets\Logo.png" alt="" />
+          <img class="scale-50" :src="require('src/assets/Logo.png')" alt="" />
           <h1 class="font-medium">DroneshopID</h1>
         </div>
         <p class="font-light text-white text-base text-left mb-3 w-fit">
           Look up the sky and beautiful world easily.
         </p>
         <div class="flex flex-row justify-between">
-          <img class="scale-75" src="src\assets\social-facebook.png" alt="" />
-          <img class="scale-75" src="src\assets\social-instagram.png" alt="" />
-          <img class="scale-75" src="src\assets\social-twitter.png" alt="" />
-          <img class="scale-75" src="src\assets\social-youtube.png" alt="" />
+          <img class="scale-75" :src='require("src/assets/social-facebook.png")' alt="" />
+          <img class="scale-75" :src='require("src/assets/social-instagram.png")' alt="" />
+          <img class="scale-75" :src='require("src/assets/social-twitter.png" )' alt="" />
+          <img class="scale-75" :src='require("src/assets/social-youtube.png")' alt="" />
         </div>
       </div>
     </div>
