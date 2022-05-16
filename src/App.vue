@@ -219,7 +219,7 @@ up to 4K Camera Resolution"
         :key="drone.name"
         class="border border-gray-300 rounded-2xl p-4 w-fit mx-auto"
       >
-        <img class="rounded-2xl mb-6 w-full" :src="drone.src" alt="" />
+        <img class="rounded-2xl mb-6 w-full" :src="require(drone.src)" alt="" />
         <h4 class="mb-3 text-2xl font-medium">{{ drone.name }}</h4>
         <p class="mb-3 text-3xl font-bold">{{ drone.price }}</p>
         <p class="px-4 mb-4">
@@ -335,38 +335,38 @@ export default {
         {
           name: "Mini Drone",
           price: "Rp 999.999",
-          src: "src\\assets\\mini_drone 1.png",
+          src: "src/assets/mini_drone 1.png",
           desc: "Powerful camera drone at an affordable price range. Camera up to 4K resolution, optimize shots automatically.",
         },
         {
           name: "Drone Light",
           price: "Rp 999.999",
-          src: "src\\assets\\drone_light 1.png",
+          src: "src/assets/drone_light 1.png",
           desc: "Powerful camera drone at an affordable price range. Camera up to 4K resolution, optimize shots automatically.",
         },
         {
           name: "Phantom Drone",
           price: "Rp 999.999",
-          src: "src\\assets\\phantom_drone 1.png",
+          src: "src/assets/phantom_drone 1.png",
           desc: "Powerful camera drone at an affordable price range. Camera up to 4K resolution, optimize shots automatically.",
         },
       ],
       testi: [
         {
           name: "Lukas Walker",
-          img: "src\\assets\\Ellipse 56.png",
+          img: "src/assets/Ellipse 56.png",
           msg: "“With high resolution camera,picture become clear and beautiful.It’s so easy to operate drone.”",
           job: "Content Creator",
         },
         {
           name: "Jessica Obrien",
-          img: "src\\assets\\Ellipse 56-1.png",
+          img: "src/assets/Ellipse 56-1.png",
           msg: "“Taking high view video become easy and faster. Battery perfomance really helping for making film.”",
           job: "Film Director",
         },
         {
           name: "Lisa Miller",
-          img: "src\\assets\\Ellipse 56-2.png",
+          img: "src/assets/Ellipse 56-2.png",
           msg: "“Making video content for my trip vlog so powerful and wonderful. Love the video quality.”",
           job: "Content Creator",
         },
